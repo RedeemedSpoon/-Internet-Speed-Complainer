@@ -23,22 +23,15 @@ class SpeedTester:
 
     def receive_result(self):
         self.browser.get("https://www.speedtest.net/")
-        self.start = self.browser.find_element(By.CSS_SELECTOR, ".start-button > a")
-        self.start.click()
+        self.browser.find_element(By.CSS_SELECTOR, ".start-button > a").click()
         time.sleep(AVG_SPEED)
         try:
-            self.popup = self.browser.find_element(
-                By.CSS_SELECTOR, "button.pure-button"
-            )
-            self.popup.click()
+            self.browser.find_element(By.CSS_SELECTOR, "button.pure-button").click()
         except:
             pass
-        self.dl_speed = self.browser.find_element(
-            By.CSS_SELECTOR, ".download-speed"
-        ).text.split(".")[0]
-        self.up_speed = self.browser.find_element(
-            By.CSS_SELECTOR, ".upload-speed"
-        ).text.split(".")[0]
+            
+        self.dl_speed = self.browser.find_element(By.CSS_SELECTOR, ".download-speed").text.split(".")[0]
+        self.up_speed = self.browser.find_element(By.CSS_SELECTOR, ".upload-speed").text.split(".")[0]
 
     def pass_test(self):
         current_time = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -54,32 +47,13 @@ class SpeedTester:
             logfile.write(self.log_text)
 
         if self.break_pormise:
-            self.browser.get("https://twitter.com/i/flow/login")
-            time.sleep(2)
-            self.username = self.browser.find_element(By.CSS_SELECTOR, ".r-30o5oe")
-            self.username.send_keys(TWITTER_USERNAME)
-            time.sleep(1)
-            self.next_btn = self.browser.find_element(
-                By.CSS_SELECTOR, "div.css-18t94o4:nth-child(6)"
-            )
-            self.next_btn.click()
-            time.sleep(1)
-            self.password = self.browser.find_element(By.CSS_SELECTOR, ".r-homxoj")
-            self.password.send_keys(TWITTER_PASSWORD)
-            time.sleep(1)
-            self.sign_up = self.browser.find_element(By.CSS_SELECTOR, ".r-19yznuf")
-            self.sign_up.click()
-            time.sleep(4)
-            self.tweet = self.browser.find_element(By.CSS_SELECTOR, ".notranslate")
-            self.tweet.send_keys(
-                START_TWEET, f" {self.dl_speed}dl/{self.up_speed}up ", END_TWEET
-            )
-            time.sleep(1)
-            self.final_post = self.browser.find_element(
-                By.CSS_SELECTOR, "div.css-18t94o4:nth-child(4)"
-            )
-            self.final_post.click()
-            time.sleep(1)
+            self.browser.get("https://twitter.com/i/flow/login"); time.sleep(2)
+            self.browser.find_element(By.CSS_SELECTOR, ".r-30o5oe").send_keys(TWITTER_USERNAME); time.sleep(1)
+            self.browser.find_element(By.CSS_SELECTOR, "div.css-18t94o4:nth-child(6)").click(); time.sleep(1)
+            self.browser.find_element(By.CSS_SELECTOR, ".r-homxoj").send_keys(TWITTER_PASSWORD); time.sleep(1)
+            self.browser.find_element(By.CSS_SELECTOR, ".r-19yznuf").click(); time.sleep(4)
+            self.browser.find_element(By.CSS_SELECTOR, ".notranslate").send_keys(START_TWEET, f" {self.dl_speed}dl/{self.up_speed}up ", END_TWEET); time.sleep(1)
+            self.browser.find_element(By.CSS_SELECTOR, "div.css-18t94o4:nth-child(4)").click(); time.sleep(1)
 
 
 bot = SpeedTester()

@@ -8,13 +8,14 @@ This Python script checks your internet speed using Speedtest.net. If the actual
 
 ### 1. Install Python
 
-Make sure you have Python 3 installed. If not, you can download it from [python.org](https://www.python.org/downloads/).
+Make sure you have Python 3 installed. If not, you can download it from [python.org](https://www.python.org/downloads/). Also make sure you have the pip command with it
 
 ### 2. Clone the repository:
 
 ```bash
 git clone https://github.com/RedeemedSpoon/Internet-Speed-Complainer.git
 cd Internet-Speed-Complainer
+pip install selenium
 ```
 
 ### 3. Run the setup script:
@@ -23,13 +24,7 @@ cd Internet-Speed-Complainer
 python3 setup.py
 ```
 
-Follow the instructions to set up important constants such as Twitter password and the path to the browser executable.
-
-## Dependencies
-
-- Python 3
-- [Selenium WebDriver](https://www.selenium.dev/)
-- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+Follow the instructions to set up important constants such as Twitter password
 
 ## Features
 
@@ -63,11 +58,8 @@ crontab -e
 2. Add the following line to run the script daily:
 
 ```bash
-0 0 * * * /path/to/python3 /path/to/speed_test.py
+0 0 * * * python3 /path/to/speed_test.py
 ```
-
-Replace `/path/to/python3` and `/path/to/speed_test.py` with the correct paths.
-(`/path/to/python3` -- python3 usually does the work and `/path/to/speed_test.py` is usually ~/Internet-Speed-Complainer)
 
 ### Automate with Task Scheduler (Windows)
 
