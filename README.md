@@ -2,7 +2,7 @@
 
 This Python script checks your internet speed using Speedtest.net. If the actual speed falls below the promised speed by your ISP, it automatically complains about it on Twitter.
 
-![Screenshot](screenshots/preview.png)
+![Screenshot](preview.png)
 
 ## Installation
 
