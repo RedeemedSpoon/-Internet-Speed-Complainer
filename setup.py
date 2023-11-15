@@ -20,7 +20,7 @@ print(
 
 sleep(1)
 print(
-    "This is the setup of this little software, that is as your guessed analyse your internet bandwidth daily to verify the promise given to you by your ISP. These inforamation are importent to complete your personal automated complainer, for more impormation, please visit: https://something.github.io"
+    "This is the setup of this little software, that is as your guessed analyse your internet bandwidth daily to verify the promise given to you by your ISP. These inforamation are importent to complete your personal automated complainer, for more impormation, please visit: https://github.com/RedeemedSpoon/Internet-Speed-Complainer"
 )
 sleep(2)
 print("let's start :\n")
