@@ -60,9 +60,7 @@ AVG_SPEED = verify(
 BROWSER = verify(
     "What browser do you use? 'Firefox', 'Chrome', 'Edge',  'Safari' ?\nIt must between these for, and no other browser in supported : ",
 ).capitalize()
-EXEC_PATH = verify(
-    f"What is the path for the selenuim webdriver executable? If your haven't downloaded it for your browser please do it via https://duckduckgo.com/?q=selenium+webdriver+for+{BROWSER}&ia=web \nIt is recommended to put in this program directory and NOT to delete it. Also, It must be the absolute path : ",
-)
+
 TWITTER_USERNAME = verify(
     "What is your twitter/x Username \nIt must include the '@' : ",
 )
@@ -76,7 +74,6 @@ with open("data.py", "w") as data_file:
     data_file.write(f"PROMISED_UP = {PROMISED_UP}\n")
     data_file.write(f"TWITTER_USERNAME = '{TWITTER_USERNAME}'\n")
     data_file.write(f"TWITTER_PASSWORD = '{TWITTER_PASSWORD}'\n")
-    data_file.write(f"EXEC_PATH = '{EXEC_PATH}'\n")
     data_file.write(f"BROWSER = '{BROWSER}'\n")
     data_file.write(f"AVG_SPEED = {AVG_SPEED}\n")
     data_file.write(f"START_TWEET = 'Hey, {ISP}! Why is my internet speed'\n")
