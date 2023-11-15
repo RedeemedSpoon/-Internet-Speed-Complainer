@@ -13,13 +13,13 @@ class SpeedTester:
 
     def get_browser(self):
         if BROWSER == "Firefox":
-            self.browser = webdriver.Firefox(executable_path=EXEC_PATH)
+            self.browser = webdriver.Firefox()
         if BROWSER == "Chrome":
-            self.browser = webdriver.Chrome(executable_path=EXEC_PATH)
+            self.browser = webdriver.Chrome()
         if BROWSER == "Edge":
-            self.browser = webdriver.Edge(executable_path=EXEC_PATH)
+            self.browser = webdriver.Edge()
         if BROWSER == "Safari":
-            self.browser = webdriver.Safari(executable_path=EXEC_PATH)
+            self.browser = webdriver.Safari()
 
     def receive_result(self):
         self.browser.get("https://www.speedtest.net/")
