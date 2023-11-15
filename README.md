@@ -29,7 +29,7 @@ Ensure the WebDriver executable is in your system's PATH or set the path in `set
 ### 4. Run the setup script:
 
 ```bash
-python setup.py
+python3 setup.py
 ```
 
 Follow the instructions to set up important constants such as Twitter password and the path to the browser executable.
@@ -58,7 +58,7 @@ Follow the instructions to set up important constants such as Twitter password a
 Run the script manually:
 
 ```bash
-python speed_test.py
+python3 speed_test.py
 ```
 
 ### Automate with Cron (Unix)
