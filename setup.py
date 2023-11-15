@@ -84,5 +84,5 @@ with open("data.py", "w") as data_file:
 
 sleep(1.5)
 print(
-    "\nAlright! We finised the setup of your program. To automate it, please read our documentation at https://something.github.io"
+    "\nAlright! We finised the setup of your program. To automate it, please read our documentation at https://github.com/RedeemedSpoon/Internet-Speed-Complainer/"
 )
