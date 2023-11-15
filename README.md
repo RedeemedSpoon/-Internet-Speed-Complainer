@@ -17,16 +17,7 @@ git clone https://github.com/RedeemedSpoon/Internet-Speed-Complainer.git
 cd Internet-Speed-Complainer
 ```
 
-### 3. Install Selenium WebDriver
-
-Download the appropriate WebDriver for your browser and platform:
-
-- Chrome: [ChromeDriver](https://sites.google.com/chromium.org/driver/)
-- Firefox: [GeckoDriver](https://github.com/mozilla/geckodriver/releases)
-
-Ensure the WebDriver executable is in your system's PATH or set the path in `setup.py`.
-
-### 4. Run the setup script:
+### 3. Run the setup script:
 
 ```bash
 python3 setup.py
