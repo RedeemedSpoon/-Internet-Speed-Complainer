@@ -1,9 +1,9 @@
-ISP = 'ejiz'
-PROMISED_DL = 4
-PROMISED_UP = 4
-TWITTER_USERNAME = 'zr'
-TWITTER_PASSWORD = 'rtzr'
+ISP = ''
+PROMISED_DL = 0
+PROMISED_UP = 0
+TWITTER_USERNAME = ''
+TWITTER_PASSWORD = ''
 BROWSER = 'Firefox'
-AVG_SPEED = 45
-START_TWEET = 'Hey, ejiz! Why is my internet speed'
-END_TWEET = 'When I pay for 4dl/4up?'
+AVG_SPEED = 0
+START_TWEET = 'Hey, ! Why is my internet speed'
+END_TWEET = 'When I pay for 0dl/0up?'
